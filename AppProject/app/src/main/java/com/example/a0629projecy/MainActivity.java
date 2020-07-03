@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         String newDate = RenewCurrentDate();
         daytv.setText(newDate);
 
-        // 웹크롤링
+        /*// 웹크롤링
         try{
             Document doc = Jsoup.connect("https://stu.gen.go.kr/edusys.jsp?page=sts_m42320").get();   // 나이스 주간 급식 사이트
             Elements elements  = doc.select("#selContEducation");   //
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         }
         catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
 
         // '아침' 버튼을 누르면 오늘 아침 메뉴를 foodText에 나타내기.
@@ -92,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 알람창으로 가기
-
+                Intent intent = new Intent(getApplicationContext(), AlarmActivity.class);
+                startActivity(intent);
             }
         });
         

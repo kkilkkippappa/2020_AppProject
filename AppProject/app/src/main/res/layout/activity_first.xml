@@ -18,31 +18,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.199" />
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <EditText
-            android:id="@+id/cityName"
-            android:layout_width="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/city_spinner"
+            android:layout_width="274dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="201dp"
-            android:hint="교육청을 선택하세요"/>
-        <Button
-            android:id="@+id/okBtn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="확인"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/schoolName"
-            tools:layout_editor_absoluteY="200dp"
-            tools:ignore="MissingConstraints" />
+            android:entries="@array/도시">
+        </Spinner>
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,4 +58,5 @@
             tools:layout_editor_absoluteY="200dp"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
+
 </LinearLayout>
